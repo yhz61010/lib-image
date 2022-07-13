@@ -1,7 +1,14 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'maven-publish'
-apply plugin: "org.sonarqube"
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'maven-publish'
+    id 'org.sonarqube'
+}
+
+//apply plugin: 'com.android.library'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'maven-publish'
+//apply plugin: "org.sonarqube"
 
 android {
     compileSdk rootProject.ext.compileSdkVersion
@@ -42,11 +49,11 @@ android {
     }
     namespace 'com.leovp.lib_image'
 
-    publishing {
-        // Publishes "release" build variant with "release" component created by
-        // Android Gradle plugin
-        singleVariant("release")
-    }
+//    publishing {
+//        // Publishes "release" build variant with "release" component created by
+//        // Android Gradle plugin
+//        singleVariant("release")
+//    }
 }
 
 dependencies {
